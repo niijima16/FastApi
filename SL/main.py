@@ -1,11 +1,13 @@
 import uvicorn
 from fastapi import FastAPI
-
+from fastapi.templating import Jinja2Templates
 from tortoise.contrib.fastapi import register_tortoise
 from settings import TORTOISE_ORM
 from api.student import student_api
 
 app = FastAPI()
+templates = Jinja2Templates(directory="\\SL\\templates")
+
 
 app.include_router(student_api,prefix="/student", tags=["履修登録システム"])
 

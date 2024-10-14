@@ -2,3 +2,4 @@ python-multipart
 pydentic
 uvicorn
 fastapi
+jinja2
